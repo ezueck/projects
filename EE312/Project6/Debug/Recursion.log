@@ -1,0 +1,11 @@
+﻿  Project6.cpp
+c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project6\project6.cpp(328): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project6\project6.cpp(329): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project6\project6.cpp(330): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project6\project6.cpp(331): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  main.cpp
+  Generating Code...
+c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project6\project6.cpp(350): warning C4715: 'solveMazeRec': not all control paths return a value
+c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project6\project6.cpp(536): warning C4715: 'smallestMartian': not all control paths return a value
+main.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  Recursion.vcxproj -> C:\Users\EZueckG\Dropbox\The University of Texas at Austin\Fourth Semester\EE312\sp2016\chase\students\ez2959\Project6\Debug\Recursion.exe

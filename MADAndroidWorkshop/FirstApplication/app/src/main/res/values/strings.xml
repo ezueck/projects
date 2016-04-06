@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">First Application</string>
+    <string name="action_settings">Settings</string>
+    <array name ="questions">
+        <item>What is the answer to question 1?</item>
+        <item>What is the best mobile OS?</item>
+    </array>
+    <array name ="answers">
+        <item>Answer to question 1</item>
+        <item>Not the answer to question 1</item>
+        <item>Still not the answer to question 1</item>
+        <item>Also not</item>
+        <item>iOS</item>
+        <item>Android</item>
+        <item>Windows Phone</item>
+        <item>BlackberryOS</item>
+    </array>
+
+    <array name = "correct_answers">
+        <item>Answer to question 1</item>
+        <item>Android</item>
+    </array>
+</resources>

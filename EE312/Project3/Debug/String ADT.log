@@ -1,0 +1,12 @@
+﻿  main.cpp
+c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project3\string.h(11): warning C4200: nonstandard extension used: zero-sized array in struct/union
+  c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project3\string.h(11): note: Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project3\main.cpp(46): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project3\main.cpp(97): warning C4101: 'p': unreferenced local variable
+  Project3.cpp
+c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project3\string.h(11): warning C4200: nonstandard extension used: zero-sized array in struct/union
+  c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project3\string.h(11): note: Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+c:\users\ezueckg\dropbox\the university of texas at austin\fourth semester\ee312\sp2016\chase\students\ez2959\project3\project3.cpp(108): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  String ADT.vcxproj -> C:\Users\ezueckg\Dropbox\The University of Texas at Austin\Fourth Semester\EE312\sp2016\chase\students\ez2959\Project3\Debug\String ADT.exe

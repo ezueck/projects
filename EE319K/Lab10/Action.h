@@ -1,0 +1,14 @@
+void ActionSelector(int, int);
+void BombHandler(int);
+extern int ServiceMove1;
+extern int ServiceMove2;
+extern int MoveTimer1;
+extern int MoveTimer2;
+extern int BombStatus[10];
+extern int BombTimer[10];
+extern int BombPlayer[10];
+extern int Map[8][8];
+extern int BombX[10];
+extern int BombY[10];
+extern int DaBombStat[6];
+void ExplosionFixer(int, int, int);

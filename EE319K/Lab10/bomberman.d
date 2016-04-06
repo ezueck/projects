@@ -1,0 +1,17 @@
+.\bomberman.o: Bomberman.c
+.\bomberman.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\bomberman.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\bomberman.o: tm4c123gh6pm.h
+.\bomberman.o: ST7735.h
+.\bomberman.o: random.h
+.\bomberman.o: TExaS.h
+.\bomberman.o: ADC.h
+.\bomberman.o: Systick.h
+.\bomberman.o: Sound.h
+.\bomberman.o: ADC.h
+.\bomberman.o: InputOutput.h
+.\bomberman.o: InputConversion.h
+.\bomberman.o: print.h
+.\bomberman.o: Action.h
+.\bomberman.o: Screen.h
+.\bomberman.o: startup.h

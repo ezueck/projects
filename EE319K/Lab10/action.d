@@ -1,0 +1,10 @@
+.\action.o: Action.c
+.\action.o: Screen.h
+.\action.o: Systick.h
+.\action.o: Sound.h
+.\action.o: InputOutput.h
+.\action.o: random.h
+.\action.o: tm4c123gh6pm.h
+.\action.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\action.o: InputConversion.h
+.\action.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h

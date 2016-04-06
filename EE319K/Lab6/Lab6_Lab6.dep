@@ -1,0 +1,22 @@
+Dependencies for Project 'Lab6', Target 'Lab6': (DO NOT MODIFY !)
+F (.\startup.s)(0x5510BC96)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\Sound.c)(0x5511E9C7)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\.. --C99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\sound.o --omf_browse .\sound.crf --depend .\sound.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
+I (dac.h)(0x5510D87D)
+I (..\tm4c123gh6pm.h)(0x54FB812A)
+I (piano.h)(0x5510BC96)
+F (.\piano.c)(0x5511E94D)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\.. --C99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\piano.o --omf_browse .\piano.crf --depend .\piano.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
+I (..\tm4c123gh6pm.h)(0x54FB812A)
+I (sound.h)(0x55114615)
+F (.\dac.c)(0x55113413)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\.. --C99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\dac.o --omf_browse .\dac.crf --depend .\dac.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
+I (..\tm4c123gh6pm.h)(0x54FB812A)
+F (.\Lab6.c)(0x551135EF)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork --split_sections --signed_chars -I.. -I..\..\.. --C99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_LM4F120H5QR-o .\lab6.o --omf_browse .\lab6.crf --depend .\lab6.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
+I (..\tm4c123gh6pm.h)(0x54FB812A)
+I (Sound.h)(0x55114615)
+I (Piano.h)(0x5510BC96)
+I (TExaS.h)(0x5510BC96)
+I (dac.h)(0x5510D87D)
+F (.\texas.o)(0x5510BC96)()

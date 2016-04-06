@@ -1,0 +1,1101 @@
+ARM Linker, 5.03 [Build 76] [MDK-ARM Professional]
+
+==============================================================================
+
+Section Cross References
+
+    action.o(i.ActionSelector) refers to action.o(i.Explosion) for Explosion
+    action.o(i.ActionSelector) refers to action.o(i.SetBomb) for SetBomb
+    action.o(i.ActionSelector) refers to action.o(i.Move) for Move
+    action.o(i.ActionSelector) refers to screen.o(i.DisplayDirection1) for DisplayDirection1
+    action.o(i.ActionSelector) refers to screen.o(i.DisplayDirection2) for DisplayDirection2
+    action.o(i.ActionSelector) refers to action.o(.data) for Direction1
+    action.o(i.ActionSelector) refers to action.o(.bss) for DaBombStat
+    action.o(i.ActionSelector) refers to systick.o(.data) for TheTimer
+    action.o(i.AddPowerCheck) refers to screen.o(i.PrintPower) for PrintPower
+    action.o(i.AddPowerCheck) refers to action.o(.data) for Map
+    action.o(i.AddPowerCheck) refers to action.o(.bss) for DaBombStat
+    action.o(i.BombHandler) refers to screen.o(i.TurnBombRed) for TurnBombRed
+    action.o(i.BombHandler) refers to screen.o(i.TurnBombBlack) for TurnBombBlack
+    action.o(i.BombHandler) refers to action.o(i.Explosion) for Explosion
+    action.o(i.BombHandler) refers to action.o(i.ExplosionFixer) for ExplosionFixer
+    action.o(i.BombHandler) refers to action.o(.bss) for BombStatus
+    action.o(i.BombHandler) refers to systick.o(.data) for TheTimer
+    action.o(i.BombHandler) refers to action.o(.data) for PowerUp
+    action.o(i.Explosion) refers to sound.o(i.Play_Sound) for Play_Sound
+    action.o(i.Explosion) refers to screen.o(i.PrintExplosion) for PrintExplosion
+    action.o(i.Explosion) refers to action.o(.data) for Map
+    action.o(i.ExplosionFixer) refers to screen.o(i.PrintEmpty) for PrintEmpty
+    action.o(i.ExplosionFixer) refers to action.o(i.NewGround) for NewGround
+    action.o(i.ExplosionFixer) refers to action.o(.data) for Map
+    action.o(i.Move) refers to action.o(i.AddPowerCheck) for AddPowerCheck
+    action.o(i.Move) refers to action.o(.data) for Map
+    action.o(i.Move) refers to systick.o(.data) for TheTimer
+    action.o(i.NewGround) refers to rand.o(.text) for rand
+    action.o(i.NewGround) refers to screen.o(i.PrintDaBombItem) for PrintDaBombItem
+    action.o(i.NewGround) refers to screen.o(i.PrintPowerUp) for PrintPowerUp
+    action.o(i.NewGround) refers to screen.o(i.PrintEmpty) for PrintEmpty
+    action.o(i.NewGround) refers to screen.o(i.DisplayDirection1) for DisplayDirection1
+    action.o(i.NewGround) refers to inputoutput.o(i.LivesOne) for LivesOne
+    action.o(i.NewGround) refers to sound.o(i.Play_Sound) for Play_Sound
+    action.o(i.NewGround) refers to screen.o(i.DisplayDirection2) for DisplayDirection2
+    action.o(i.NewGround) refers to inputoutput.o(i.LivesTwo) for LivesTwo
+    action.o(i.NewGround) refers to action.o(.data) for Map
+    action.o(i.NewGround) refers to action.o(.bss) for DaBombStat
+    action.o(i.SetBomb) refers to screen.o(i.PlaceBomb) for PlaceBomb
+    action.o(i.SetBomb) refers to action.o(.data) for Map
+    bomberman.o(i.Conclusion) refers to screen.o(i.PrintWinner1) for PrintWinner1
+    bomberman.o(i.Conclusion) refers to screen.o(i.PrintWinner2) for PrintWinner2
+    bomberman.o(i.Conclusion) refers to bomberman.o(i.Delay100ms) for Delay100ms
+    bomberman.o(i.Initialization) refers to texas.o(i.PLL_Init) for PLL_Init
+    bomberman.o(i.Initialization) refers to sound.o(i.Sound_Init) for Sound_Init
+    bomberman.o(i.Initialization) refers to st7735.o(i.ST7735_InitR) for ST7735_InitR
+    bomberman.o(i.Initialization) refers to adc.o(i.ADC0_Init) for ADC0_Init
+    bomberman.o(i.Initialization) refers to inputoutput.o(i.IO_Init) for IO_Init
+    bomberman.o(i.Initialization) refers to systick.o(i.Systick_Init) for Systick_Init
+    bomberman.o(i.Initialization) refers to inputoutput.o(i.LivesOne) for LivesOne
+    bomberman.o(i.Initialization) refers to inputoutput.o(i.LivesTwo) for LivesTwo
+    bomberman.o(i.Initialization) refers to rand.o(.text) for srand
+    bomberman.o(i.Initialization) refers to startup.o(.text) for EnableInterrupts
+    bomberman.o(i.Introduction) refers to screen.o(i.PrintIntro) for PrintIntro
+    bomberman.o(i.Introduction) refers to systick.o(.data) for InputOne
+    bomberman.o(i.main) refers to bomberman.o(i.Initialization) for Initialization
+    bomberman.o(i.main) refers to bomberman.o(i.Introduction) for Introduction
+    bomberman.o(i.main) refers to screen.o(i.PrintStartImage) for PrintStartImage
+    bomberman.o(i.main) refers to screen.o(i.PrintPower) for PrintPower
+    bomberman.o(i.main) refers to screen.o(i.PrintADC) for PrintADC
+    bomberman.o(i.main) refers to inputconversion.o(i.Input_Convert) for Input_Convert
+    bomberman.o(i.main) refers to action.o(i.ActionSelector) for ActionSelector
+    bomberman.o(i.main) refers to screen.o(i.ScreenMove1) for ScreenMove1
+    bomberman.o(i.main) refers to screen.o(i.ScreenMove2) for ScreenMove2
+    bomberman.o(i.main) refers to action.o(i.BombHandler) for BombHandler
+    bomberman.o(i.main) refers to action.o(i.ExplosionFixer) for ExplosionFixer
+    bomberman.o(i.main) refers to bomberman.o(.data) for PrevDaBomb
+    bomberman.o(i.main) refers to systick.o(.data) for DaBomb
+    bomberman.o(i.main) refers to action.o(.data) for ServiceMove1
+    bomberman.o(i.main) refers to action.o(.bss) for BombStatus
+    inputconversion.o(i.ADC_Convert) refers to dfltui.o(.text) for __aeabi_ui2d
+    inputconversion.o(i.ADC_Convert) refers to dmul.o(.text) for __aeabi_dmul
+    inputconversion.o(i.ADC_Convert) refers to dadd.o(.text) for __aeabi_drsub
+    inputconversion.o(i.ADC_Convert) refers to dfixi.o(.text) for __aeabi_d2iz
+    inputoutput.o(i.LivesOne) refers to screen.o(i.PrintDarkness) for PrintDarkness
+    inputoutput.o(i.LivesOne) refers to bomberman.o(i.Conclusion) for Conclusion
+    inputoutput.o(i.LivesTwo) refers to screen.o(i.PrintDarkness) for PrintDarkness
+    inputoutput.o(i.LivesTwo) refers to bomberman.o(i.Conclusion) for Conclusion
+    screen.o(i.DisplayDirection1) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.DisplayDirection1) refers to screen.o(.constdata) for GSUp
+    screen.o(i.DisplayDirection2) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.DisplayDirection2) refers to screen.o(.constdata) for RSUp
+    screen.o(i.PlaceBomb) refers to screen.o(i.PrintBombDa) for PrintBombDa
+    screen.o(i.PlaceBomb) refers to sound.o(i.Play_Sound) for Play_Sound
+    screen.o(i.PlaceBomb) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PlaceBomb) refers to action.o(.bss) for DaBombStat
+    screen.o(i.PlaceBomb) refers to action.o(.data) for Map
+    screen.o(i.PlaceBomb) refers to systick.o(.data) for TheTimer
+    screen.o(i.PlaceBomb) refers to screen.o(.constdata) for BlueBombG
+    screen.o(i.PlaceBomb) refers to screen.o(.data) for BNum
+    screen.o(i.PrintADC) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintADC) refers to screen.o(.constdata) for Big1
+    screen.o(i.PrintBombDa) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintBombDa) refers to screen.o(.constdata) for DaBombSprite
+    screen.o(i.PrintDaBombItem) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintDaBombItem) refers to screen.o(.constdata) for RupeeG
+    screen.o(i.PrintDarkness) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintDarkness) refers to screen.o(.constdata) for Darkness
+    screen.o(i.PrintEmpty) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintEmpty) refers to screen.o(.constdata) for Empty
+    screen.o(i.PrintExplosion) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintExplosion) refers to screen.o(.constdata) for Fire
+    screen.o(i.PrintIntro) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintIntro) refers to screen.o(.constdata) for Intro
+    screen.o(i.PrintPower) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintPower) refers to screen.o(.constdata) for Small1
+    screen.o(i.PrintPowerUp) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintPowerUp) refers to screen.o(.constdata) for PowerUpG
+    screen.o(i.PrintStartImage) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintStartImage) refers to screen.o(.constdata) for StartImage
+    screen.o(i.PrintWinner1) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintWinner1) refers to screen.o(.constdata) for WinScreen1
+    screen.o(i.PrintWinner2) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.PrintWinner2) refers to screen.o(.constdata) for WinScreen2
+    screen.o(i.ScreenMove1) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.ScreenMove1) refers to systick.o(.data) for TheTimer
+    screen.o(i.ScreenMove1) refers to action.o(.data) for MoveTimer1
+    screen.o(i.ScreenMove1) refers to screen.o(.data) for MoveCounter1
+    screen.o(i.ScreenMove1) refers to screen.o(.constdata) for GSUp
+    screen.o(i.ScreenMove2) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.ScreenMove2) refers to systick.o(.data) for TheTimer
+    screen.o(i.ScreenMove2) refers to action.o(.data) for MoveTimer2
+    screen.o(i.ScreenMove2) refers to screen.o(.data) for MoveCounter2
+    screen.o(i.ScreenMove2) refers to screen.o(.constdata) for RSUp
+    screen.o(i.TurnBombBlack) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.TurnBombBlack) refers to screen.o(.constdata) for BlueBombG
+    screen.o(i.TurnBombRed) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
+    screen.o(i.TurnBombRed) refers to screen.o(.constdata) for RedBombG
+    sound.o(i.Play_Sound) refers to sound.o(.data) for Sound
+    sound.o(i.Sound_Init) refers to timer0.o(i.Timer0_Init) for Timer0_Init
+    sound.o(i.Sound_Init) refers to dac.o(i.DAC_Init) for DAC_Init
+    st7735.o(i.Output_Clear) refers to st7735.o(i.ST7735_FillScreen) for ST7735_FillScreen
+    st7735.o(i.Output_Color) refers to st7735.o(i.ST7735_SetTextColor) for ST7735_SetTextColor
+    st7735.o(i.Output_Init) refers to st7735.o(i.ST7735_InitR) for ST7735_InitR
+    st7735.o(i.Output_Init) refers to st7735.o(i.ST7735_FillScreen) for ST7735_FillScreen
+    st7735.o(i.Output_Off) refers to st7735.o(i.Output_Clear) for Output_Clear
+    st7735.o(i.Output_On) refers to st7735.o(i.Output_Init) for Output_Init
+    st7735.o(i.ST7735_DrawBitmap) refers to st7735.o(i.setAddrWindow) for setAddrWindow
+    st7735.o(i.ST7735_DrawBitmap) refers to lcd.o(.text) for writedata
+    st7735.o(i.ST7735_DrawBitmap) refers to st7735.o(.data) for _width
+    st7735.o(i.ST7735_DrawChar) refers to st7735.o(i.setAddrWindow) for setAddrWindow
+    st7735.o(i.ST7735_DrawChar) refers to st7735.o(i.pushColor) for pushColor
+    st7735.o(i.ST7735_DrawChar) refers to st7735.o(.data) for _width
+    st7735.o(i.ST7735_DrawChar) refers to st7735.o(.constdata) for Font
+    st7735.o(i.ST7735_DrawCharS) refers to st7735.o(i.ST7735_DrawPixel) for ST7735_DrawPixel
+    st7735.o(i.ST7735_DrawCharS) refers to st7735.o(i.ST7735_FillRect) for ST7735_FillRect
+    st7735.o(i.ST7735_DrawCharS) refers to st7735.o(.data) for _width
+    st7735.o(i.ST7735_DrawCharS) refers to st7735.o(.constdata) for Font
+    st7735.o(i.ST7735_DrawFastHLine) refers to st7735.o(i.setAddrWindow) for setAddrWindow
+    st7735.o(i.ST7735_DrawFastHLine) refers to lcd.o(.text) for writedata
+    st7735.o(i.ST7735_DrawFastHLine) refers to st7735.o(.data) for _width
+    st7735.o(i.ST7735_DrawFastVLine) refers to st7735.o(i.setAddrWindow) for setAddrWindow
+    st7735.o(i.ST7735_DrawFastVLine) refers to lcd.o(.text) for writedata
+    st7735.o(i.ST7735_DrawFastVLine) refers to st7735.o(.data) for _width
+    st7735.o(i.ST7735_DrawPixel) refers to st7735.o(i.setAddrWindow) for setAddrWindow
+    st7735.o(i.ST7735_DrawPixel) refers to st7735.o(i.pushColor) for pushColor
+    st7735.o(i.ST7735_DrawPixel) refers to st7735.o(.data) for _width
+    st7735.o(i.ST7735_DrawString) refers to st7735.o(i.ST7735_DrawCharS) for ST7735_DrawCharS
+    st7735.o(i.ST7735_FillRect) refers to st7735.o(i.setAddrWindow) for setAddrWindow
+    st7735.o(i.ST7735_FillRect) refers to lcd.o(.text) for writedata
+    st7735.o(i.ST7735_FillRect) refers to st7735.o(.data) for _width
+    st7735.o(i.ST7735_FillScreen) refers to st7735.o(i.ST7735_FillRect) for ST7735_FillRect
+    st7735.o(i.ST7735_FillScreen) refers to st7735.o(.data) for _height
+    st7735.o(i.ST7735_InitB) refers to st7735.o(i.commonInit) for commonInit
+    st7735.o(i.ST7735_InitB) refers to st7735.o(i.ST7735_SetCursor) for ST7735_SetCursor
+    st7735.o(i.ST7735_InitB) refers to st7735.o(i.ST7735_FillScreen) for ST7735_FillScreen
+    st7735.o(i.ST7735_InitB) refers to st7735.o(.constdata) for Bcmd
+    st7735.o(i.ST7735_InitB) refers to st7735.o(.data) for StTextColor
+    st7735.o(i.ST7735_InitR) refers to st7735.o(i.commonInit) for commonInit
+    st7735.o(i.ST7735_InitR) refers to st7735.o(i.commandList) for commandList
+    st7735.o(i.ST7735_InitR) refers to lcd.o(.text) for writecommand
+    st7735.o(i.ST7735_InitR) refers to st7735.o(i.ST7735_SetCursor) for ST7735_SetCursor
+    st7735.o(i.ST7735_InitR) refers to st7735.o(i.ST7735_FillScreen) for ST7735_FillScreen
+    st7735.o(i.ST7735_InitR) refers to st7735.o(.constdata) for Rcmd1
+    st7735.o(i.ST7735_InitR) refers to st7735.o(.data) for ColStart
+    st7735.o(i.ST7735_InvertDisplay) refers to lcd.o(.text) for writecommand
+    st7735.o(i.ST7735_OutChar) refers to st7735.o(i.ST7735_DrawString) for ST7735_DrawString
+    st7735.o(i.ST7735_OutChar) refers to st7735.o(i.ST7735_DrawCharS) for ST7735_DrawCharS
+    st7735.o(i.ST7735_OutChar) refers to st7735.o(.data) for StY
+    st7735.o(i.ST7735_OutString) refers to st7735.o(i.ST7735_OutChar) for ST7735_OutChar
+    st7735.o(i.ST7735_OutUDec) refers to st7735.o(i.fillmessage) for fillmessage
+    st7735.o(i.ST7735_OutUDec) refers to st7735.o(i.ST7735_DrawString) for ST7735_DrawString
+    st7735.o(i.ST7735_OutUDec) refers to st7735.o(i.ST7735_DrawCharS) for ST7735_DrawCharS
+    st7735.o(i.ST7735_OutUDec) refers to st7735.o(.data) for Messageindex
+    st7735.o(i.ST7735_OutUDec) refers to st7735.o(.bss) for Message
+    st7735.o(i.ST7735_PlotBar) refers to st7735.o(i.ST7735_DrawFastVLine) for ST7735_DrawFastVLine
+    st7735.o(i.ST7735_PlotBar) refers to st7735.o(.data) for Ymin
+    st7735.o(i.ST7735_PlotClear) refers to st7735.o(i.ST7735_Color565) for ST7735_Color565
+    st7735.o(i.ST7735_PlotClear) refers to st7735.o(i.ST7735_FillRect) for ST7735_FillRect
+    st7735.o(i.ST7735_PlotClear) refers to st7735.o(.data) for Ymax
+    st7735.o(i.ST7735_PlotLine) refers to st7735.o(i.ST7735_DrawPixel) for ST7735_DrawPixel
+    st7735.o(i.ST7735_PlotLine) refers to st7735.o(.data) for Ymin
+    st7735.o(i.ST7735_PlotNext) refers to st7735.o(.data) for X
+    st7735.o(i.ST7735_PlotNextErase) refers to st7735.o(i.ST7735_Color565) for ST7735_Color565
+    st7735.o(i.ST7735_PlotNextErase) refers to st7735.o(i.ST7735_DrawFastVLine) for ST7735_DrawFastVLine
+    st7735.o(i.ST7735_PlotNextErase) refers to st7735.o(.data) for X
+    st7735.o(i.ST7735_PlotPoint) refers to st7735.o(i.ST7735_DrawPixel) for ST7735_DrawPixel
+    st7735.o(i.ST7735_PlotPoint) refers to st7735.o(.data) for Ymin
+    st7735.o(i.ST7735_PlotPoints) refers to st7735.o(i.ST7735_DrawPixel) for ST7735_DrawPixel
+    st7735.o(i.ST7735_PlotPoints) refers to st7735.o(.data) for Ymin
+    st7735.o(i.ST7735_PlotdBfs) refers to st7735.o(i.ST7735_DrawFastVLine) for ST7735_DrawFastVLine
+    st7735.o(i.ST7735_PlotdBfs) refers to st7735.o(.constdata) for dBfs
+    st7735.o(i.ST7735_PlotdBfs) refers to st7735.o(.data) for X
+    st7735.o(i.ST7735_SetCursor) refers to st7735.o(.data) for StX
+    st7735.o(i.ST7735_SetRotation) refers to lcd.o(.text) for writecommand
+    st7735.o(i.ST7735_SetRotation) refers to st7735.o(.data) for Rotation
+    st7735.o(i.ST7735_SetTextColor) refers to st7735.o(.data) for StTextColor
+    st7735.o(i.commandList) refers to lcd.o(.text) for writecommand
+    st7735.o(i.commandList) refers to st7735.o(i.Delay1ms) for Delay1ms
+    st7735.o(i.commonInit) refers to st7735.o(i.Delay1ms) for Delay1ms
+    st7735.o(i.commonInit) refers to st7735.o(i.commandList) for commandList
+    st7735.o(i.commonInit) refers to st7735.o(.data) for RowStart
+    st7735.o(i.fillmessage) refers to st7735.o(.bss) for Message
+    st7735.o(i.fillmessage) refers to st7735.o(.data) for Messageindex
+    st7735.o(i.fputc) refers to st7735.o(i.ST7735_OutChar) for ST7735_OutChar
+    st7735.o(i.pushColor) refers to lcd.o(.text) for writedata
+    st7735.o(i.setAddrWindow) refers to lcd.o(.text) for writecommand
+    st7735.o(i.setAddrWindow) refers to st7735.o(.data) for ColStart
+    systick.o(i.SysTick_Handler) refers to inputoutput.o(i.Input_Check1) for Input_Check1
+    systick.o(i.SysTick_Handler) refers to inputoutput.o(i.Input_Check2) for Input_Check2
+    systick.o(i.SysTick_Handler) refers to adc.o(i.ADC0_In) for ADC0_In
+    systick.o(i.SysTick_Handler) refers to inputconversion.o(i.ADC_Convert) for ADC_Convert
+    systick.o(i.SysTick_Handler) refers to systick.o(.data) for InputOne
+    texas.o(i.SetCode) refers to texas.o(.bss) for TExaS
+    texas.o(i.SetCourse) refers to texas.o(.bss) for TExaS
+    texas.o(i.SetMode) refers to texas.o(.bss) for TExaS
+    texas.o(i.StartTimer4) refers to texas.o(.data) for ScopeCount
+    texas.o(i.TExaS_Init) refers to texas.o(i.PLL_Init) for PLL_Init
+    texas.o(i.TExaS_Init) refers to texas.o(i.SetCourse) for SetCourse
+    texas.o(i.TExaS_Init) refers to texas.o(i.UART0_Init) for UART0_Init
+    texas.o(i.TExaS_Init) refers to texas.o(i.SetCode) for SetCode
+    texas.o(i.TExaS_Init) refers to texas.o(i.ADC1_Init) for ADC1_Init
+    texas.o(i.TExaS_Init) refers to texas.o(.constdata) for IntroMsg
+    texas.o(i.TExaS_Init) refers to texas.o(.bss) for TExaS
+    texas.o(i.TExaS_Init) refers to texas.o(.data) for LastMode
+    texas.o(i.Timer5A_Handler) refers to texas.o(i.ADC1_In) for ADC1_In
+    texas.o(i.Timer5A_Handler) refers to texas.o(.data) for TExaS_Period
+    timer0.o(i.Timer0A_Handler) refers to dac.o(i.DAC_Out) for DAC_Out
+    timer0.o(i.Timer0A_Handler) refers to sound.o(.data) for Sound
+    timer0.o(i.Timer0A_Handler) refers to timer0.o(.data) for Place
+    timer1.o(i.Timer1A_Handler) refers to timer1.o(.data) for PeriodicTask1
+    timer1.o(i.Timer1_Init) refers to timer1.o(.data) for PeriodicTask1
+    print.o(.text) refers to st7735.o(i.ST7735_OutChar) for ST7735_OutChar
+    print.o(.text) refers to print.o(Variables) for CounterA
+    startup.o(RESET) refers to startup.o(STACK) for StackMem
+    startup.o(RESET) refers to systick.o(i.SysTick_Handler) for SysTick_Handler
+    startup.o(RESET) refers to timer0.o(i.Timer0A_Handler) for Timer0A_Handler
+    startup.o(RESET) refers to timer1.o(i.Timer1A_Handler) for Timer1A_Handler
+    startup.o(RESET) refers to texas.o(i.Timer4A_Handler) for Timer4A_Handler
+    startup.o(RESET) refers to texas.o(i.Timer5A_Handler) for Timer5A_Handler
+    startup.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    random.o(.text) refers to random.o(DATA) for M
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    rand.o(.text) refers to rand.o(.data) for .data
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to bomberman.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to bomberman.o(i.main) for main
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing adc.o(i.ADC2_In), (44 bytes).
+    Removing adc.o(i.ADC2_Init), (188 bytes).
+    Removing st7735.o(i.Output_Clear), (10 bytes).
+    Removing st7735.o(i.Output_Color), (12 bytes).
+    Removing st7735.o(i.Output_Init), (16 bytes).
+    Removing st7735.o(i.Output_Off), (8 bytes).
+    Removing st7735.o(i.Output_On), (8 bytes).
+    Removing st7735.o(i.ST7735_Color565), (24 bytes).
+    Removing st7735.o(i.ST7735_DrawChar), (268 bytes).
+    Removing st7735.o(i.ST7735_DrawCharS), (244 bytes).
+    Removing st7735.o(i.ST7735_DrawFastHLine), (124 bytes).
+    Removing st7735.o(i.ST7735_DrawFastVLine), (124 bytes).
+    Removing st7735.o(i.ST7735_DrawPixel), (72 bytes).
+    Removing st7735.o(i.ST7735_DrawString), (86 bytes).
+    Removing st7735.o(i.ST7735_InitB), (40 bytes).
+    Removing st7735.o(i.ST7735_InvertDisplay), (22 bytes).
+    Removing st7735.o(i.ST7735_OutChar), (212 bytes).
+    Removing st7735.o(i.ST7735_OutString), (24 bytes).
+    Removing st7735.o(i.ST7735_OutUDec), (140 bytes).
+    Removing st7735.o(i.ST7735_PlotBar), (88 bytes).
+    Removing st7735.o(i.ST7735_PlotClear), (92 bytes).
+    Removing st7735.o(i.ST7735_PlotLine), (264 bytes).
+    Removing st7735.o(i.ST7735_PlotNext), (32 bytes).
+    Removing st7735.o(i.ST7735_PlotNextErase), (64 bytes).
+    Removing st7735.o(i.ST7735_PlotPoint), (152 bytes).
+    Removing st7735.o(i.ST7735_PlotPoints), (172 bytes).
+    Removing st7735.o(i.ST7735_PlotdBfs), (60 bytes).
+    Removing st7735.o(i.ST7735_SetRotation), (212 bytes).
+    Removing st7735.o(i.ST7735_SetTextColor), (12 bytes).
+    Removing st7735.o(i.ST7735_SwapColor), (18 bytes).
+    Removing st7735.o(i.ferror), (8 bytes).
+    Removing st7735.o(i.fgetc), (6 bytes).
+    Removing st7735.o(i.fillmessage), (72 bytes).
+    Removing st7735.o(i.fputc), (16 bytes).
+    Removing st7735.o(i.pushColor), (18 bytes).
+    Removing st7735.o(.bss), (12 bytes).
+    Removing texas.o(i.ADC1_Init), (216 bytes).
+    Removing texas.o(i.SetCode), (24 bytes).
+    Removing texas.o(i.SetCourse), (24 bytes).
+    Removing texas.o(i.SetMode), (24 bytes).
+    Removing texas.o(i.StartTimer4), (36 bytes).
+    Removing texas.o(i.StopTimer4), (24 bytes).
+    Removing texas.o(i.TExaS_Init), (448 bytes).
+    Removing texas.o(i.TExaS_Stop), (28 bytes).
+    Removing texas.o(i.UART0_InChar), (24 bytes).
+    Removing texas.o(i.UART0_InCharNonBlocking), (28 bytes).
+    Removing texas.o(i.UART0_Init), (192 bytes).
+    Removing texas.o(i.UART0_OutChar), (24 bytes).
+    Removing texas.o(i.UART0_OutCharNonBlock), (12 bytes).
+    Removing texas.o(i.copy), (18 bytes).
+    Removing texas.o(.bss), (56 bytes).
+    Removing texas.o(.constdata), (360 bytes).
+    Removing timer0.o(.constdata), (32 bytes).
+    Removing timer1.o(i.Timer1_Init), (96 bytes).
+    Removing print.o(Variables), (8 bytes).
+    Removing print.o(.text), (404 bytes).
+    Removing startup.o(HEAP), (0 bytes).
+    Removing random.o(DATA), (4 bytes).
+    Removing random.o(.text), (64 bytes).
+
+59 unused section(s) (total 5110 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      644  startup.o(RESET)
+    ../clib/../cmprslib/lz77c.c              0x00000000   Number         0  __dclz77c.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/stdlib/rand.c           0x00000000   Number         0  rand.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixi.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ADC.c                                    0x00000000   Number         0  adc.o ABSOLUTE
+    Action.c                                 0x00000000   Number         0  action.o ABSOLUTE
+    Bomberman.c                              0x00000000   Number         0  bomberman.o ABSOLUTE
+    DAC.c                                    0x00000000   Number         0  dac.o ABSOLUTE
+    InputConversion.c                        0x00000000   Number         0  inputconversion.o ABSOLUTE
+    InputOutput.c                            0x00000000   Number         0  inputoutput.o ABSOLUTE
+    LCD.s                                    0x00000000   Number         0  lcd.o ABSOLUTE
+    Print.s                                  0x00000000   Number         0  print.o ABSOLUTE
+    ST7735.c                                 0x00000000   Number         0  st7735.o ABSOLUTE
+    Screen.c                                 0x00000000   Number         0  screen.o ABSOLUTE
+    Sound.c                                  0x00000000   Number         0  sound.o ABSOLUTE
+    Systick.c                                0x00000000   Number         0  systick.o ABSOLUTE
+    TExaS.c                                  0x00000000   Number         0  texas.o ABSOLUTE
+    Timer0.c                                 0x00000000   Number         0  timer0.o ABSOLUTE
+    Timer1.c                                 0x00000000   Number         0  timer1.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    random.s                                 0x00000000   Number         0  random.o ABSOLUTE
+    startup.s                                0x00000000   Number         0  startup.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x00000284   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000284   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x00000288   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x0000028c   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x0000028c   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x0000028c   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x00000294   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x00000294   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x00000294   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x00000294   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x00000298   Section       76  lcd.o(.text)
+    .text                                    0x000002e4   Section       28  startup.o(.text)
+    .text                                    0x00000300   Section        0  rand.o(.text)
+    .text                                    0x00000324   Section        0  dadd.o(.text)
+    .text                                    0x00000472   Section        0  dmul.o(.text)
+    .text                                    0x00000556   Section        0  dfltui.o(.text)
+    .text                                    0x00000570   Section        0  dfixi.o(.text)
+    .text                                    0x000005ae   Section        0  llshl.o(.text)
+    .text                                    0x000005cc   Section        0  llushr.o(.text)
+    .text                                    0x000005ec   Section        0  llsshr.o(.text)
+    .text                                    0x00000610   Section        0  depilogue.o(.text)
+    .text                                    0x00000610   Section        0  iusefp.o(.text)
+    .text                                    0x000006d0   Section       36  init.o(.text)
+    .text                                    0x000006f4   Section        0  __dclz77c.o(.text)
+    i.ADC0_In                                0x00000754   Section        0  adc.o(i.ADC0_In)
+    i.ADC0_Init                              0x00000780   Section        0  adc.o(i.ADC0_Init)
+    i.ADC1_In                                0x0000085c   Section        0  texas.o(i.ADC1_In)
+    i.ADC_Convert                            0x00000868   Section        0  inputconversion.o(i.ADC_Convert)
+    i.ActionSelector                         0x000008c4   Section        0  action.o(i.ActionSelector)
+    i.AddPowerCheck                          0x00000a74   Section        0  action.o(i.AddPowerCheck)
+    i.BombHandler                            0x00000ad4   Section        0  action.o(i.BombHandler)
+    i.Conclusion                             0x00000c84   Section        0  bomberman.o(i.Conclusion)
+    i.DAC_Init                               0x00000ca4   Section        0  dac.o(i.DAC_Init)
+    i.DAC_Out                                0x00000d14   Section        0  dac.o(i.DAC_Out)
+    i.Delay100ms                             0x00000d24   Section        0  bomberman.o(i.Delay100ms)
+    i.Delay1ms                               0x00000d48   Section        0  st7735.o(i.Delay1ms)
+    i.DisplayDirection1                      0x00000d68   Section        0  screen.o(i.DisplayDirection1)
+    i.DisplayDirection2                      0x00000e00   Section        0  screen.o(i.DisplayDirection2)
+    i.Explosion                              0x00000e98   Section        0  action.o(i.Explosion)
+    i.ExplosionFixer                         0x00000fd0   Section        0  action.o(i.ExplosionFixer)
+    i.IO_Init                                0x00001074   Section        0  inputoutput.o(i.IO_Init)
+    i.Initialization                         0x0000114c   Section        0  bomberman.o(i.Initialization)
+    i.Input_Check1                           0x00001184   Section        0  inputoutput.o(i.Input_Check1)
+    i.Input_Check2                           0x00001198   Section        0  inputoutput.o(i.Input_Check2)
+    i.Input_Convert                          0x000011a8   Section        0  inputconversion.o(i.Input_Convert)
+    i.Introduction                           0x000011e8   Section        0  bomberman.o(i.Introduction)
+    i.LivesOne                               0x00001208   Section        0  inputoutput.o(i.LivesOne)
+    i.LivesTwo                               0x0000122e   Section        0  inputoutput.o(i.LivesTwo)
+    i.Move                                   0x00001254   Section        0  action.o(i.Move)
+    i.NewGround                              0x000014ec   Section        0  action.o(i.NewGround)
+    i.PLL_Init                               0x00001618   Section        0  texas.o(i.PLL_Init)
+    i.PlaceBomb                              0x00001694   Section        0  screen.o(i.PlaceBomb)
+    i.Play_Sound                             0x00001778   Section        0  sound.o(i.Play_Sound)
+    i.PrintADC                               0x00001798   Section        0  screen.o(i.PrintADC)
+    i.PrintBombDa                            0x00001820   Section        0  screen.o(i.PrintBombDa)
+    i.PrintDaBombItem                        0x00001848   Section        0  screen.o(i.PrintDaBombItem)
+    i.PrintDarkness                          0x00001870   Section        0  screen.o(i.PrintDarkness)
+    i.PrintEmpty                             0x0000188c   Section        0  screen.o(i.PrintEmpty)
+    i.PrintExplosion                         0x000018b4   Section        0  screen.o(i.PrintExplosion)
+    i.PrintIntro                             0x000018dc   Section        0  screen.o(i.PrintIntro)
+    i.PrintPower                             0x000018f4   Section        0  screen.o(i.PrintPower)
+    i.PrintPowerUp                           0x00001990   Section        0  screen.o(i.PrintPowerUp)
+    i.PrintStartImage                        0x000019b8   Section        0  screen.o(i.PrintStartImage)
+    i.PrintWinner1                           0x000019d0   Section        0  screen.o(i.PrintWinner1)
+    i.PrintWinner2                           0x000019e8   Section        0  screen.o(i.PrintWinner2)
+    i.ST7735_DrawBitmap                      0x00001a00   Section        0  st7735.o(i.ST7735_DrawBitmap)
+    i.ST7735_FillRect                        0x00001b20   Section        0  st7735.o(i.ST7735_FillRect)
+    i.ST7735_FillScreen                      0x00001bcc   Section        0  st7735.o(i.ST7735_FillScreen)
+    i.ST7735_InitR                           0x00001bf0   Section        0  st7735.o(i.ST7735_InitR)
+    i.ST7735_SetCursor                       0x00001c6c   Section        0  st7735.o(i.ST7735_SetCursor)
+    i.ScreenMove1                            0x00001c8c   Section        0  screen.o(i.ScreenMove1)
+    i.ScreenMove2                            0x00001f28   Section        0  screen.o(i.ScreenMove2)
+    i.SetBomb                                0x000021c4   Section        0  action.o(i.SetBomb)
+    i.Sound_Init                             0x00002260   Section        0  sound.o(i.Sound_Init)
+    i.SysTick_Handler                        0x00002270   Section        0  systick.o(i.SysTick_Handler)
+    i.Systick_Init                           0x000022ac   Section        0  systick.o(i.Systick_Init)
+    i.Timer0A_Handler                        0x000022e0   Section        0  timer0.o(i.Timer0A_Handler)
+    i.Timer0_Init                            0x000023d8   Section        0  timer0.o(i.Timer0_Init)
+    i.Timer1A_Handler                        0x00002434   Section        0  timer1.o(i.Timer1A_Handler)
+    i.Timer4A_Handler                        0x0000244c   Section        0  texas.o(i.Timer4A_Handler)
+    i.Timer5A_Handler                        0x0000246c   Section        0  texas.o(i.Timer5A_Handler)
+    i.TurnBombBlack                          0x0000249c   Section        0  screen.o(i.TurnBombBlack)
+    i.TurnBombRed                            0x000024c4   Section        0  screen.o(i.TurnBombRed)
+    i.__scatterload_copy                     0x000024ec   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x000024fa   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x000024fc   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.commandList                            0x0000250a   Section        0  st7735.o(i.commandList)
+    commandList                              0x0000250b   Thumb Code    86  st7735.o(i.commandList)
+    i.commonInit                             0x00002560   Section        0  st7735.o(i.commonInit)
+    commonInit                               0x00002561   Thumb Code   340  st7735.o(i.commonInit)
+    i.main                                   0x000026e4   Section        0  bomberman.o(i.main)
+    i.setAddrWindow                          0x000027fc   Section        0  st7735.o(i.setAddrWindow)
+    setAddrWindow                            0x000027fd   Thumb Code   106  st7735.o(i.setAddrWindow)
+    .constdata                               0x00002870   Section    176928  screen.o(.constdata)
+    .constdata                               0x0002db90   Section     2018  st7735.o(.constdata)
+    Font                                     0x0002db90   Data        1275  st7735.o(.constdata)
+    Bcmd                                     0x0002e08b   Data         103  st7735.o(.constdata)
+    Rcmd1                                    0x0002e0f2   Data          59  st7735.o(.constdata)
+    Rcmd2green                               0x0002e12d   Data          13  st7735.o(.constdata)
+    Rcmd2red                                 0x0002e13a   Data          13  st7735.o(.constdata)
+    Rcmd3                                    0x0002e147   Data          43  st7735.o(.constdata)
+    .data                                    0x20000000   Section      328  action.o(.data)
+    .data                                    0x20000148   Section       24  bomberman.o(.data)
+    .data                                    0x20000160   Section       36  screen.o(.data)
+    .data                                    0x20000184   Section        8  sound.o(.data)
+    .data                                    0x2000018c   Section       44  st7735.o(.data)
+    _width                                   0x20000196   Data           2  st7735.o(.data)
+    _height                                  0x20000198   Data           2  st7735.o(.data)
+    ColStart                                 0x200001a0   Data           1  st7735.o(.data)
+    RowStart                                 0x200001a1   Data           1  st7735.o(.data)
+    Rotation                                 0x200001a2   Data           1  st7735.o(.data)
+    TabColor                                 0x200001a3   Data           1  st7735.o(.data)
+    .data                                    0x200001b8   Section       16  systick.o(.data)
+    .data                                    0x200001c8   Section       52  texas.o(.data)
+    .data                                    0x200001fc   Section    17365  timer0.o(.data)
+    .data                                    0x200045d4   Section        4  timer1.o(.data)
+    .data                                    0x200045d8   Section        4  rand.o(.data)
+    _rand_state                              0x200045d8   Data           4  rand.o(.data)
+    .bss                                     0x200045dc   Section      224  action.o(.bss)
+    STACK                                    0x200046c0   Section     1024  startup.o(STACK)
+    StackMem                                 0x200046c0   Data           0  startup.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  bomberman.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup.o(RESET)
+    NMI_Handler                              0x00000271   Thumb Code     2  startup.o(RESET)
+    HardFault_Handler                        0x00000273   Thumb Code     2  startup.o(RESET)
+    MemManage_Handler                        0x00000275   Thumb Code     2  startup.o(RESET)
+    BusFault_Handler                         0x00000277   Thumb Code     2  startup.o(RESET)
+    UsageFault_Handler                       0x00000279   Thumb Code     2  startup.o(RESET)
+    SVC_Handler                              0x0000027b   Thumb Code     2  startup.o(RESET)
+    DebugMon_Handler                         0x0000027d   Thumb Code     2  startup.o(RESET)
+    PendSV_Handler                           0x0000027f   Thumb Code     2  startup.o(RESET)
+    ADC0Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Ethernet_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ExtBus_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    FPU_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    Fan0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    FlashCtl_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortA_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortB_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortC_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortD_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortE_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortF_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortG_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortH_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortJ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortK_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortL_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortM_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortN_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortR_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortS_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    Hibernate_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C4_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C5_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2S0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    LPC0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    PECI0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature0_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature1_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature2_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SysCtl_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer0B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer1B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer2A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer2B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer4B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer5B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    UART0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART3_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART4_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART5_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART6_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART7_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    USB0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    WDT_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Error                               0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    __main                                   0x00000285   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000285   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x00000289   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x0000028d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x0000028d   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x0000028d   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x0000028d   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x00000295   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x00000295   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    writecommand                             0x00000299   Thumb Code     0  lcd.o(.text)
+    writedata                                0x000002bd   Thumb Code     0  lcd.o(.text)
+    DisableInterrupts                        0x000002e5   Thumb Code     0  startup.o(.text)
+    EnableInterrupts                         0x000002e9   Thumb Code     0  startup.o(.text)
+    StartCritical                            0x000002ed   Thumb Code     0  startup.o(.text)
+    EndCritical                              0x000002f5   Thumb Code     0  startup.o(.text)
+    WaitForInterrupt                         0x000002fb   Thumb Code     0  startup.o(.text)
+    rand                                     0x00000301   Thumb Code    20  rand.o(.text)
+    srand                                    0x00000315   Thumb Code     6  rand.o(.text)
+    __aeabi_dadd                             0x00000325   Thumb Code   322  dadd.o(.text)
+    __aeabi_dsub                             0x00000467   Thumb Code     6  dadd.o(.text)
+    __aeabi_drsub                            0x0000046d   Thumb Code     6  dadd.o(.text)
+    __aeabi_dmul                             0x00000473   Thumb Code   228  dmul.o(.text)
+    __aeabi_ui2d                             0x00000557   Thumb Code    26  dfltui.o(.text)
+    __aeabi_d2iz                             0x00000571   Thumb Code    62  dfixi.o(.text)
+    __aeabi_llsl                             0x000005af   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x000005af   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x000005cd   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x000005cd   Thumb Code     0  llushr.o(.text)
+    __aeabi_lasr                             0x000005ed   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x000005ed   Thumb Code     0  llsshr.o(.text)
+    __I$use$fp                               0x00000611   Thumb Code     0  iusefp.o(.text)
+    _double_round                            0x00000611   Thumb Code    26  depilogue.o(.text)
+    _double_epilogue                         0x0000062b   Thumb Code   164  depilogue.o(.text)
+    __scatterload                            0x000006d1   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000006d1   Thumb Code     0  init.o(.text)
+    __decompress                             0x000006f5   Thumb Code     0  __dclz77c.o(.text)
+    __decompress2                            0x000006f5   Thumb Code    96  __dclz77c.o(.text)
+    ADC0_In                                  0x00000755   Thumb Code    36  adc.o(i.ADC0_In)
+    ADC0_Init                                0x00000781   Thumb Code   180  adc.o(i.ADC0_Init)
+    ADC1_In                                  0x0000085d   Thumb Code     6  texas.o(i.ADC1_In)
+    ADC_Convert                              0x00000869   Thumb Code    76  inputconversion.o(i.ADC_Convert)
+    ActionSelector                           0x000008c5   Thumb Code   388  action.o(i.ActionSelector)
+    AddPowerCheck                            0x00000a75   Thumb Code    84  action.o(i.AddPowerCheck)
+    BombHandler                              0x00000ad5   Thumb Code   404  action.o(i.BombHandler)
+    Conclusion                               0x00000c85   Thumb Code    32  bomberman.o(i.Conclusion)
+    DAC_Init                                 0x00000ca5   Thumb Code    88  dac.o(i.DAC_Init)
+    DAC_Out                                  0x00000d15   Thumb Code    10  dac.o(i.DAC_Out)
+    Delay100ms                               0x00000d25   Thumb Code    30  bomberman.o(i.Delay100ms)
+    Delay1ms                                 0x00000d49   Thumb Code    32  st7735.o(i.Delay1ms)
+    DisplayDirection1                        0x00000d69   Thumb Code   136  screen.o(i.DisplayDirection1)
+    DisplayDirection2                        0x00000e01   Thumb Code   136  screen.o(i.DisplayDirection2)
+    Explosion                                0x00000e99   Thumb Code   308  action.o(i.Explosion)
+    ExplosionFixer                           0x00000fd1   Thumb Code   160  action.o(i.ExplosionFixer)
+    IO_Init                                  0x00001075   Thumb Code   174  inputoutput.o(i.IO_Init)
+    Initialization                           0x0000114d   Thumb Code    56  bomberman.o(i.Initialization)
+    Input_Check1                             0x00001185   Thumb Code    14  inputoutput.o(i.Input_Check1)
+    Input_Check2                             0x00001199   Thumb Code    10  inputoutput.o(i.Input_Check2)
+    Input_Convert                            0x000011a9   Thumb Code    62  inputconversion.o(i.Input_Convert)
+    Introduction                             0x000011e9   Thumb Code    24  bomberman.o(i.Introduction)
+    LivesOne                                 0x00001209   Thumb Code    38  inputoutput.o(i.LivesOne)
+    LivesTwo                                 0x0000122f   Thumb Code    38  inputoutput.o(i.LivesTwo)
+    Move                                     0x00001255   Thumb Code   622  action.o(i.Move)
+    NewGround                                0x000014ed   Thumb Code   276  action.o(i.NewGround)
+    PLL_Init                                 0x00001619   Thumb Code   118  texas.o(i.PLL_Init)
+    PlaceBomb                                0x00001695   Thumb Code   188  screen.o(i.PlaceBomb)
+    Play_Sound                               0x00001779   Thumb Code    24  sound.o(i.Play_Sound)
+    PrintADC                                 0x00001799   Thumb Code   114  screen.o(i.PrintADC)
+    PrintBombDa                              0x00001821   Thumb Code    34  screen.o(i.PrintBombDa)
+    PrintDaBombItem                          0x00001849   Thumb Code    34  screen.o(i.PrintDaBombItem)
+    PrintDarkness                            0x00001871   Thumb Code    24  screen.o(i.PrintDarkness)
+    PrintEmpty                               0x0000188d   Thumb Code    34  screen.o(i.PrintEmpty)
+    PrintExplosion                           0x000018b5   Thumb Code    34  screen.o(i.PrintExplosion)
+    PrintIntro                               0x000018dd   Thumb Code    20  screen.o(i.PrintIntro)
+    PrintPower                               0x000018f5   Thumb Code   134  screen.o(i.PrintPower)
+    PrintPowerUp                             0x00001991   Thumb Code    34  screen.o(i.PrintPowerUp)
+    PrintStartImage                          0x000019b9   Thumb Code    20  screen.o(i.PrintStartImage)
+    PrintWinner1                             0x000019d1   Thumb Code    20  screen.o(i.PrintWinner1)
+    PrintWinner2                             0x000019e9   Thumb Code    20  screen.o(i.PrintWinner2)
+    ST7735_DrawBitmap                        0x00001a01   Thumb Code   280  st7735.o(i.ST7735_DrawBitmap)
+    ST7735_FillRect                          0x00001b21   Thumb Code   164  st7735.o(i.ST7735_FillRect)
+    ST7735_FillScreen                        0x00001bcd   Thumb Code    28  st7735.o(i.ST7735_FillScreen)
+    ST7735_InitR                             0x00001bf1   Thumb Code    90  st7735.o(i.ST7735_InitR)
+    ST7735_SetCursor                         0x00001c6d   Thumb Code    22  st7735.o(i.ST7735_SetCursor)
+    ScreenMove1                              0x00001c8d   Thumb Code   608  screen.o(i.ScreenMove1)
+    ScreenMove2                              0x00001f29   Thumb Code   608  screen.o(i.ScreenMove2)
+    SetBomb                                  0x000021c5   Thumb Code   150  action.o(i.SetBomb)
+    Sound_Init                               0x00002261   Thumb Code    16  sound.o(i.Sound_Init)
+    SysTick_Handler                          0x00002271   Thumb Code    44  systick.o(i.SysTick_Handler)
+    Systick_Init                             0x000022ad   Thumb Code    42  systick.o(i.Systick_Init)
+    Timer0A_Handler                          0x000022e1   Thumb Code   216  timer0.o(i.Timer0A_Handler)
+    Timer0_Init                              0x000023d9   Thumb Code    76  timer0.o(i.Timer0_Init)
+    Timer1A_Handler                          0x00002435   Thumb Code    16  timer1.o(i.Timer1A_Handler)
+    Timer4A_Handler                          0x0000244d   Thumb Code    20  texas.o(i.Timer4A_Handler)
+    Timer5A_Handler                          0x0000246d   Thumb Code    34  texas.o(i.Timer5A_Handler)
+    TurnBombBlack                            0x0000249d   Thumb Code    34  screen.o(i.TurnBombBlack)
+    TurnBombRed                              0x000024c5   Thumb Code    34  screen.o(i.TurnBombRed)
+    __scatterload_copy                       0x000024ed   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x000024fb   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x000024fd   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x000026e5   Thumb Code   232  bomberman.o(i.main)
+    GMLeft                                   0x00002870   Data         512  screen.o(.constdata)
+    GMRight                                  0x00002a70   Data         512  screen.o(.constdata)
+    GMDown                                   0x00002c70   Data         512  screen.o(.constdata)
+    GMUp                                     0x00002e70   Data         512  screen.o(.constdata)
+    RMRight                                  0x00003070   Data         512  screen.o(.constdata)
+    RMLeft                                   0x00003270   Data         512  screen.o(.constdata)
+    RMDown                                   0x00003470   Data         512  screen.o(.constdata)
+    RMUp                                     0x00003670   Data         512  screen.o(.constdata)
+    Small4                                   0x00003870   Data          60  screen.o(.constdata)
+    Small3                                   0x000038ac   Data          60  screen.o(.constdata)
+    Small2                                   0x000038e8   Data          60  screen.o(.constdata)
+    Small1                                   0x00003924   Data          60  screen.o(.constdata)
+    Small5                                   0x00003960   Data          60  screen.o(.constdata)
+    Big4                                     0x0000399c   Data         180  screen.o(.constdata)
+    Big3                                     0x00003a50   Data         180  screen.o(.constdata)
+    Big2                                     0x00003b04   Data         180  screen.o(.constdata)
+    Big1                                     0x00003bb8   Data         180  screen.o(.constdata)
+    Big5                                     0x00003c6c   Data         180  screen.o(.constdata)
+    DaBombSprite                             0x00003d20   Data         512  screen.o(.constdata)
+    RupeeG                                   0x00003f20   Data         512  screen.o(.constdata)
+    Darkness                                 0x00004120   Data         112  screen.o(.constdata)
+    Intro                                    0x00004190   Data       40960  screen.o(.constdata)
+    StartImage                               0x0000e190   Data       40960  screen.o(.constdata)
+    PowerUpG                                 0x00018190   Data         512  screen.o(.constdata)
+    WinScreen1                               0x00018390   Data       40960  screen.o(.constdata)
+    WinScreen2                               0x00022390   Data       40960  screen.o(.constdata)
+    Empty                                    0x0002c390   Data         512  screen.o(.constdata)
+    Fire                                     0x0002c590   Data         512  screen.o(.constdata)
+    RSDown                                   0x0002c790   Data         512  screen.o(.constdata)
+    GSUp                                     0x0002c990   Data         512  screen.o(.constdata)
+    GSRight                                  0x0002cb90   Data         512  screen.o(.constdata)
+    GSLeft                                   0x0002cd90   Data         512  screen.o(.constdata)
+    GSDown                                   0x0002cf90   Data         512  screen.o(.constdata)
+    RSUp                                     0x0002d190   Data         512  screen.o(.constdata)
+    RSLeft                                   0x0002d390   Data         512  screen.o(.constdata)
+    RSRight                                  0x0002d590   Data         512  screen.o(.constdata)
+    BlueBombG                                0x0002d790   Data         512  screen.o(.constdata)
+    RedBombG                                 0x0002d990   Data         512  screen.o(.constdata)
+    dBfs                                     0x0002e172   Data         512  st7735.o(.constdata)
+    Region$$Table$$Base                      0x0002e374   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0002e394   Number         0  anon$$obj.o(Region$$Table)
+    Position1x                               0x20000000   Data           4  action.o(.data)
+    Position1y                               0x20000004   Data           4  action.o(.data)
+    Position2x                               0x20000008   Data           4  action.o(.data)
+    Position2y                               0x2000000c   Data           4  action.o(.data)
+    SetLock1                                 0x20000010   Data           4  action.o(.data)
+    SetLock2                                 0x20000014   Data           4  action.o(.data)
+    Direction1                               0x20000018   Data           4  action.o(.data)
+    Direction2                               0x2000001c   Data           4  action.o(.data)
+    ServiceMove1                             0x20000020   Data           4  action.o(.data)
+    ServiceMove2                             0x20000024   Data           4  action.o(.data)
+    MoveTimer1                               0x20000028   Data           4  action.o(.data)
+    MoveTimer2                               0x2000002c   Data           4  action.o(.data)
+    BombNumber                               0x20000030   Data           4  action.o(.data)
+    PowerUp                                  0x20000034   Data          12  action.o(.data)
+    Lives1                                   0x20000040   Data           4  action.o(.data)
+    Lives2                                   0x20000044   Data           4  action.o(.data)
+    Map                                      0x20000048   Data         256  action.o(.data)
+    BombI                                    0x20000148   Data           4  bomberman.o(.data)
+    PrevDaBomb                               0x2000014c   Data           4  bomberman.o(.data)
+    OneInput                                 0x20000150   Data           4  bomberman.o(.data)
+    TwoInput                                 0x20000154   Data           4  bomberman.o(.data)
+    Service1                                 0x20000158   Data           4  bomberman.o(.data)
+    Service2                                 0x2000015c   Data           4  bomberman.o(.data)
+    Pix1x                                    0x20000160   Data           4  screen.o(.data)
+    Pix1y                                    0x20000164   Data           4  screen.o(.data)
+    Pix2x                                    0x20000168   Data           4  screen.o(.data)
+    Pix2y                                    0x2000016c   Data           4  screen.o(.data)
+    Moves1                                   0x20000170   Data           4  screen.o(.data)
+    Moves2                                   0x20000174   Data           4  screen.o(.data)
+    BNum                                     0x20000178   Data           4  screen.o(.data)
+    MoveCounter1                             0x2000017c   Data           4  screen.o(.data)
+    MoveCounter2                             0x20000180   Data           4  screen.o(.data)
+    Sound                                    0x20000184   Data           4  sound.o(.data)
+    LowLife                                  0x20000188   Data           4  sound.o(.data)
+    StX                                      0x2000018c   Data           4  st7735.o(.data)
+    StY                                      0x20000190   Data           4  st7735.o(.data)
+    StTextColor                              0x20000194   Data           2  st7735.o(.data)
+    lastj                                    0x2000019c   Data           4  st7735.o(.data)
+    Messageindex                             0x200001a4   Data           4  st7735.o(.data)
+    Ymax                                     0x200001a8   Data           4  st7735.o(.data)
+    Ymin                                     0x200001ac   Data           4  st7735.o(.data)
+    X                                        0x200001b0   Data           4  st7735.o(.data)
+    Yrange                                   0x200001b4   Data           4  st7735.o(.data)
+    InputOne                                 0x200001b8   Data           4  systick.o(.data)
+    InputTwo                                 0x200001bc   Data           4  systick.o(.data)
+    TheTimer                                 0x200001c0   Data           4  systick.o(.data)
+    DaBomb                                   0x200001c4   Data           4  systick.o(.data)
+    TExaS_Period                             0x200001c8   Data           4  texas.o(.data)
+    TExaS_Ports                              0x200001cc   Data           8  texas.o(.data)
+    Display                                  0x200001d4   Data           1  texas.o(.data)
+    TExaS_Meter                              0x200001d8   Data           4  texas.o(.data)
+    ADCnum                                   0x200001dc   Data           4  texas.o(.data)
+    LastMode                                 0x200001e0   Data           4  texas.o(.data)
+    bFlag                                    0x200001e4   Data           4  texas.o(.data)
+    Count                                    0x200001e8   Data           4  texas.o(.data)
+    DelayBetweenTests                        0x200001ec   Data           4  texas.o(.data)
+    TExaS_Test                               0x200001f0   Data           4  texas.o(.data)
+    ScopeMode                                0x200001f4   Data           4  texas.o(.data)
+    ScopeCount                               0x200001f8   Data           4  texas.o(.data)
+    Place                                    0x200001fc   Data        1807  timer0.o(.data)
+    Damage                                   0x2000090b   Data        3853  timer0.o(.data)
+    Explode                                  0x20001818   Data       11685  timer0.o(.data)
+    i1                                       0x200045c0   Data           4  timer0.o(.data)
+    i2                                       0x200045c4   Data           4  timer0.o(.data)
+    i3                                       0x200045c8   Data           4  timer0.o(.data)
+    i4                                       0x200045cc   Data           4  timer0.o(.data)
+    Index                                    0x200045d0   Data           1  timer0.o(.data)
+    PeriodicTask1                            0x200045d4   Data           4  timer1.o(.data)
+    BombStatus                               0x200045dc   Data          40  action.o(.bss)
+    BombTimer                                0x20004604   Data          40  action.o(.bss)
+    BombX                                    0x2000462c   Data          40  action.o(.bss)
+    BombY                                    0x20004654   Data          40  action.o(.bss)
+    BombPlayer                               0x2000467c   Data          40  action.o(.bss)
+    DaBombStat                               0x200046a4   Data          24  action.o(.bss)
+    __initial_sp                             0x20004ac0   Data           0  startup.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0000026d
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00032970, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x0002f0d0])
+
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x0002e394, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000284   Code   RO          829  * RESET               startup.o
+    0x00000284   0x00000000   Code   RO          840  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000284   0x00000004   Code   RO          854    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000288   0x00000004   Code   RO          857    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x0000028c   0x00000000   Code   RO          859    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x0000028c   0x00000000   Code   RO          861    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x0000028c   0x00000008   Code   RO          862    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000294   0x00000000   Code   RO          864    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000294   0x00000000   Code   RO          866    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000294   0x00000004   Code   RO          855    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000298   0x0000004c   Code   RO          819    .text               lcd.o
+    0x000002e4   0x0000001c   Code   RO          830    .text               startup.o
+    0x00000300   0x00000024   Code   RO          843    .text               mc_w.l(rand.o)
+    0x00000324   0x0000014e   Code   RO          846    .text               mf_w.l(dadd.o)
+    0x00000472   0x000000e4   Code   RO          848    .text               mf_w.l(dmul.o)
+    0x00000556   0x0000001a   Code   RO          850    .text               mf_w.l(dfltui.o)
+    0x00000570   0x0000003e   Code   RO          852    .text               mf_w.l(dfixi.o)
+    0x000005ae   0x0000001e   Code   RO          868    .text               mc_w.l(llshl.o)
+    0x000005cc   0x00000020   Code   RO          870    .text               mc_w.l(llushr.o)
+    0x000005ec   0x00000024   Code   RO          872    .text               mc_w.l(llsshr.o)
+    0x00000610   0x00000000   Code   RO          874    .text               mc_w.l(iusefp.o)
+    0x00000610   0x000000be   Code   RO          875    .text               mf_w.l(depilogue.o)
+    0x000006ce   0x00000002   PAD
+    0x000006d0   0x00000024   Code   RO          877    .text               mc_w.l(init.o)
+    0x000006f4   0x00000060   Code   RO          887    .text               mc_w.l(__dclz77c.o)
+    0x00000754   0x0000002c   Code   RO           74    i.ADC0_In           adc.o
+    0x00000780   0x000000dc   Code   RO           75    i.ADC0_Init         adc.o
+    0x0000085c   0x0000000c   Code   RO          656    i.ADC1_In           texas.o
+    0x00000868   0x0000005c   Code   RO          167    i.ADC_Convert       inputconversion.o
+    0x000008c4   0x000001b0   Code   RO            1    i.ActionSelector    action.o
+    0x00000a74   0x00000060   Code   RO            2    i.AddPowerCheck     action.o
+    0x00000ad4   0x000001b0   Code   RO            3    i.BombHandler       action.o
+    0x00000c84   0x00000020   Code   RO          104    i.Conclusion        bomberman.o
+    0x00000ca4   0x00000070   Code   RO          149    i.DAC_Init          dac.o
+    0x00000d14   0x00000010   Code   RO          150    i.DAC_Out           dac.o
+    0x00000d24   0x00000024   Code   RO          105    i.Delay100ms        bomberman.o
+    0x00000d48   0x00000020   Code   RO          366    i.Delay1ms          st7735.o
+    0x00000d68   0x00000098   Code   RO          218    i.DisplayDirection1  screen.o
+    0x00000e00   0x00000098   Code   RO          219    i.DisplayDirection2  screen.o
+    0x00000e98   0x00000138   Code   RO            4    i.Explosion         action.o
+    0x00000fd0   0x000000a4   Code   RO            5    i.ExplosionFixer    action.o
+    0x00001074   0x000000d8   Code   RO          182    i.IO_Init           inputoutput.o
+    0x0000114c   0x00000038   Code   RO          106    i.Initialization    bomberman.o
+    0x00001184   0x00000014   Code   RO          183    i.Input_Check1      inputoutput.o
+    0x00001198   0x00000010   Code   RO          184    i.Input_Check2      inputoutput.o
+    0x000011a8   0x0000003e   Code   RO          168    i.Input_Convert     inputconversion.o
+    0x000011e6   0x00000002   PAD
+    0x000011e8   0x00000020   Code   RO          107    i.Introduction      bomberman.o
+    0x00001208   0x00000026   Code   RO          185    i.LivesOne          inputoutput.o
+    0x0000122e   0x00000026   Code   RO          186    i.LivesTwo          inputoutput.o
+    0x00001254   0x00000298   Code   RO            6    i.Move              action.o
+    0x000014ec   0x0000012c   Code   RO            7    i.NewGround         action.o
+    0x00001618   0x0000007c   Code   RO          658    i.PLL_Init          texas.o
+    0x00001694   0x000000e4   Code   RO          220    i.PlaceBomb         screen.o
+    0x00001778   0x00000020   Code   RO          342    i.Play_Sound        sound.o
+    0x00001798   0x00000088   Code   RO          221    i.PrintADC          screen.o
+    0x00001820   0x00000028   Code   RO          222    i.PrintBombDa       screen.o
+    0x00001848   0x00000028   Code   RO          223    i.PrintDaBombItem   screen.o
+    0x00001870   0x0000001c   Code   RO          224    i.PrintDarkness     screen.o
+    0x0000188c   0x00000028   Code   RO          225    i.PrintEmpty        screen.o
+    0x000018b4   0x00000028   Code   RO          226    i.PrintExplosion    screen.o
+    0x000018dc   0x00000018   Code   RO          227    i.PrintIntro        screen.o
+    0x000018f4   0x0000009c   Code   RO          228    i.PrintPower        screen.o
+    0x00001990   0x00000028   Code   RO          229    i.PrintPowerUp      screen.o
+    0x000019b8   0x00000018   Code   RO          230    i.PrintStartImage   screen.o
+    0x000019d0   0x00000018   Code   RO          231    i.PrintWinner1      screen.o
+    0x000019e8   0x00000018   Code   RO          232    i.PrintWinner2      screen.o
+    0x00001a00   0x00000120   Code   RO          373    i.ST7735_DrawBitmap  st7735.o
+    0x00001b20   0x000000ac   Code   RO          380    i.ST7735_FillRect   st7735.o
+    0x00001bcc   0x00000024   Code   RO          381    i.ST7735_FillScreen  st7735.o
+    0x00001bf0   0x0000007c   Code   RO          383    i.ST7735_InitR      st7735.o
+    0x00001c6c   0x00000020   Code   RO          396    i.ST7735_SetCursor  st7735.o
+    0x00001c8c   0x0000029c   Code   RO          233    i.ScreenMove1       screen.o
+    0x00001f28   0x0000029c   Code   RO          234    i.ScreenMove2       screen.o
+    0x000021c4   0x0000009c   Code   RO            8    i.SetBomb           action.o
+    0x00002260   0x00000010   Code   RO          343    i.Sound_Init        sound.o
+    0x00002270   0x0000003c   Code   RO          635    i.SysTick_Handler   systick.o
+    0x000022ac   0x00000034   Code   RO          636    i.Systick_Init      systick.o
+    0x000022e0   0x000000f8   Code   RO          776    i.Timer0A_Handler   timer0.o
+    0x000023d8   0x0000005c   Code   RO          777    i.Timer0_Init       timer0.o
+    0x00002434   0x00000018   Code   RO          798    i.Timer1A_Handler   timer1.o
+    0x0000244c   0x00000020   Code   RO          666    i.Timer4A_Handler   texas.o
+    0x0000246c   0x00000030   Code   RO          667    i.Timer5A_Handler   texas.o
+    0x0000249c   0x00000028   Code   RO          235    i.TurnBombBlack     screen.o
+    0x000024c4   0x00000028   Code   RO          236    i.TurnBombRed       screen.o
+    0x000024ec   0x0000000e   Code   RO          881    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x000024fa   0x00000002   Code   RO          882    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000024fc   0x0000000e   Code   RO          883    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0000250a   0x00000056   Code   RO          400    i.commandList       st7735.o
+    0x00002560   0x00000184   Code   RO          401    i.commonInit        st7735.o
+    0x000026e4   0x00000118   Code   RO          108    i.main              bomberman.o
+    0x000027fc   0x00000074   Code   RO          407    i.setAddrWindow     st7735.o
+    0x00002870   0x0002b320   Data   RO          237    .constdata          screen.o
+    0x0002db90   0x000007e2   Data   RO          409    .constdata          st7735.o
+    0x0002e372   0x00000002   PAD
+    0x0002e374   0x00000020   Data   RO          879    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Base: 0x20000000, Size: 0x000045dc, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x00000d3c])
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000148   Data   RW           10    .data               action.o
+    0x20000148   0x00000018   Data   RW          109    .data               bomberman.o
+    0x20000160   0x00000024   Data   RW          238    .data               screen.o
+    0x20000184   0x00000008   Data   RW          344    .data               sound.o
+    0x2000018c   0x0000002c   Data   RW          410    .data               st7735.o
+    0x200001b8   0x00000010   Data   RW          637    .data               systick.o
+    0x200001c8   0x00000034   Data   RW          676    .data               texas.o
+    0x200001fc   0x000043d5   Data   RW          779    .data               timer0.o
+    0x200045d1   0x00000003   PAD
+    0x200045d4   0x00000004   Data   RW          800    .data               timer1.o
+    0x200045d8   0x00000004   Data   RW          844    .data               mc_w.l(rand.o)
+
+
+    Execution Region ER_ZI (Base: 0x200045dc, Size: 0x000004e4, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x200045dc   0x000000e0   Zero   RW            9    .bss                action.o
+    0x200046bc   0x00000004   PAD
+    0x200046c0   0x00000400   Zero   RW          827    STACK               startup.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      2556        164          0        328        224      11151   action.o
+       264         48          0          0          0        954   adc.o
+       436         62          0         24          0       3324   bomberman.o
+       128         30          0          0          0        873   dac.o
+       154         16          0          0          0       1170   inputconversion.o
+       328         54          0          0          0       2378   inputoutput.o
+        76         14          0          0          0        236   lcd.o
+      2564        298     176928         36          0      12082   screen.o
+        48          8          0          8          0       1086   sound.o
+      1274        126       2018         44          0       8980   st7735.o
+       672        622          0          0       1024        868   startup.o
+       112         26          0         16          0       1145   systick.o
+       216         38          0         52          0      13404   texas.o
+       340         48          0      17365          0       1798   timer0.o
+        24          8          0          4          0        822   timer1.o
+
+    ----------------------------------------------------------------------
+      9194       1562     178980      17880       1252      60271   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         2          0          2          3          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        96          0          0          0          0          0   __dclz77c.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        30          0          0          0          0         68   llshl.o
+        36          0          0          0          0         68   llsshr.o
+        32          0          0          0          0         68   llushr.o
+        36         10          0          4          0        136   rand.o
+       334          0          0          0          0        148   dadd.o
+       190          0          0          0          0        176   depilogue.o
+        62          0          0          0          0         80   dfixi.o
+        26          0          0          0          0         76   dfltui.o
+       228          0          0          0          0         96   dmul.o
+
+    ----------------------------------------------------------------------
+      1158         26          0          4          0        984   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       316         26          0          4          0        408   mc_w.l
+       840          0          0          0          0        576   mf_w.l
+
+    ----------------------------------------------------------------------
+      1158         26          0          4          0        984   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     10352       1588     178980      17884       1252      57771   Grand Totals
+     10352       1588     178980       3388       1252      57771   ELF Image Totals (compressed)
+     10352       1588     178980       3388          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)               189332 ( 184.89kB)
+    Total RW  Size (RW Data + ZI Data)             19136 (  18.69kB)
+    Total ROM Size (Code + RO Data + RW Data)     192720 ( 188.20kB)
+
+==============================================================================
+

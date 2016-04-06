@@ -1,0 +1,21 @@
+--cpu Cortex-M4
+".\action.o"
+".\adc.o"
+".\bomberman.o"
+".\dac.o"
+".\inputconversion.o"
+".\inputoutput.o"
+".\screen.o"
+".\sound.o"
+".\st7735.o"
+".\systick.o"
+".\texas.o"
+".\timer0.o"
+".\timer1.o"
+".\lcd.o"
+".\print.o"
+".\startup.o"
+".\random.o"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\ST7735.map" -o .\ST7735.axf
